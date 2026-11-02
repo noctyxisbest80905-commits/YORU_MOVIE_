@@ -21,7 +21,7 @@ for dist in sorted(meta.distributions(),key=lambda d:d.metadata.get('Name','').l
 for name in ['LICENSE.txt','LICENSE']:
     p=Path(sys.base_prefix)/name
     if p.exists():include('Python runtime',p)
-result=subprocess.run(['cargo','metadata','--locked','--format-version','1'],cwd=root,check=True,capture_output=True,text=True)
+result=subprocess.run(['cargo','metadata','--locked','--format-version','1'],cwd=root,check=True,capture_output=True,text=True,encoding='utf-8')
 for package in json.loads(result.stdout)['packages']:
     name=package['name']+' '+package['version']+' — '+str(package.get('license') or 'see upstream notices')
     folder=Path(package['manifest_path']).parent
