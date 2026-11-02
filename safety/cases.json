@@ -1,0 +1,1129 @@
+[
+  {
+    "name": "allow Naruto",
+    "value": {
+      "title": "Naruto",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Naruto Shippuden",
+    "value": {
+      "title": "Naruto Shippuden",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow One Piece",
+    "value": {
+      "title": "One Piece",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Attack on Titan",
+    "value": {
+      "title": "Attack on Titan",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Demon Slayer",
+    "value": {
+      "title": "Demon Slayer",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Jujutsu Kaisen",
+    "value": {
+      "title": "Jujutsu Kaisen",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow My Hero Academia",
+    "value": {
+      "title": "My Hero Academia",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Boku no Hero Academia",
+    "value": {
+      "title": "Boku no Hero Academia",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Bleach",
+    "value": {
+      "title": "Bleach",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Frieren: Beyond Journey’s End",
+    "value": {
+      "title": "Frieren: Beyond Journey’s End",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Spy x Family",
+    "value": {
+      "title": "Spy x Family",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Your Name",
+    "value": {
+      "title": "Your Name",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow A Silent Voice",
+    "value": {
+      "title": "A Silent Voice",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Hunter x Hunter",
+    "value": {
+      "title": "Hunter x Hunter",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Death Note",
+    "value": {
+      "title": "Death Note",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Dragon Ball Z",
+    "value": {
+      "title": "Dragon Ball Z",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Haikyu!!",
+    "value": {
+      "title": "Haikyu!!",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Pokemon",
+    "value": {
+      "title": "Pokemon",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow xxxHOLiC",
+    "value": {
+      "title": "xxxHOLiC",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Hardcore Henry",
+    "value": {
+      "title": "Hardcore Henry",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Sex Education",
+    "value": {
+      "title": "Sex Education",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Adult Beginners",
+    "value": {
+      "title": "Adult Beginners",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow 18 Again",
+    "value": {
+      "title": "18 Again",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Uncensored martial arts",
+    "value": {
+      "title": "Uncensored martial arts",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow The anime handbook",
+    "value": {
+      "title": "The anime handbook",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow The Hunter",
+    "value": {
+      "title": "The Hunter",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Hen House",
+    "value": {
+      "title": "Hen House",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow Tail of the Dragon",
+    "value": {
+      "title": "Tail of the Dragon",
+      "genres": [
+        "Anime",
+        "Action"
+      ],
+      "description": "A fictional adventure."
+    },
+    "blocked": false
+  },
+  {
+    "name": "block title Hentai collection",
+    "value": {
+      "title": "Hentai collection"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title HENTAI 01",
+    "value": {
+      "title": "HENTAI 01"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title ＨＥＮＴＡＩ",
+    "value": {
+      "title": "ＨＥＮＴＡＩ"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title h3nt@i edition",
+    "value": {
+      "title": "h3nt@i edition"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title h.e.n.t.a.i release",
+    "value": {
+      "title": "h.e.n.t.a.i release"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title h e n t a i special",
+    "value": {
+      "title": "h e n t a i special"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title hen_tai special",
+    "value": {
+      "title": "hen_tai special"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title h​entai episode",
+    "value": {
+      "title": "h​entai episode"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title Anime [18+]",
+    "value": {
+      "title": "Anime [18+]"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title Anime (Adult)",
+    "value": {
+      "title": "Anime (Adult)"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title Anime [R-18]",
+    "value": {
+      "title": "Anime [R-18]"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title Movie [NSFW]",
+    "value": {
+      "title": "Movie [NSFW]"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title Pornographic anime",
+    "value": {
+      "title": "Pornographic anime"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title A XXX movie",
+    "value": {
+      "title": "A XXX movie"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title Boku no Pico [Hindi]",
+    "value": {
+      "title": "Boku no Pico [Hindi]"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title Bible Black Remastered",
+    "value": {
+      "title": "Bible Black Remastered"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title Itadaki Seieki",
+    "value": {
+      "title": "Itadaki Seieki"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title Oni Chichi",
+    "value": {
+      "title": "Oni Chichi"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title Adult anime collection",
+    "value": {
+      "title": "Adult anime collection"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title Sexually explicit animation",
+    "value": {
+      "title": "Sexually explicit animation"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title Rule34 collection",
+    "value": {
+      "title": "Rule34 collection"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title ヘンタイ アニメ",
+    "value": {
+      "title": "ヘンタイ アニメ"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title 成人向けアニメ",
+    "value": {
+      "title": "成人向けアニメ"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title 成人动漫",
+    "value": {
+      "title": "成人动漫"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title хентай сериал",
+    "value": {
+      "title": "хентай сериал"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block title 헨타이 애니",
+    "value": {
+      "title": "헨타이 애니"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block adultTrue",
+    "value": {
+      "title": "Neutral title",
+      "adult": true
+    },
+    "blocked": true
+  },
+  {
+    "name": "block adult1",
+    "value": {
+      "title": "Neutral title",
+      "adult": 1
+    },
+    "blocked": true
+  },
+  {
+    "name": "block adulttrue",
+    "value": {
+      "title": "Neutral title",
+      "adult": "true"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block adultyes",
+    "value": {
+      "title": "Neutral title",
+      "adult": "yes"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block adult1",
+    "value": {
+      "title": "Neutral title",
+      "adult": "1"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_adultTrue",
+    "value": {
+      "title": "Neutral title",
+      "is_adult": true
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_adult1",
+    "value": {
+      "title": "Neutral title",
+      "is_adult": 1
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_adulttrue",
+    "value": {
+      "title": "Neutral title",
+      "is_adult": "true"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_adultyes",
+    "value": {
+      "title": "Neutral title",
+      "is_adult": "yes"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_adult1",
+    "value": {
+      "title": "Neutral title",
+      "is_adult": "1"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block isAdultTrue",
+    "value": {
+      "title": "Neutral title",
+      "isAdult": true
+    },
+    "blocked": true
+  },
+  {
+    "name": "block isAdult1",
+    "value": {
+      "title": "Neutral title",
+      "isAdult": 1
+    },
+    "blocked": true
+  },
+  {
+    "name": "block isAdulttrue",
+    "value": {
+      "title": "Neutral title",
+      "isAdult": "true"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block isAdultyes",
+    "value": {
+      "title": "Neutral title",
+      "isAdult": "yes"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block isAdult1",
+    "value": {
+      "title": "Neutral title",
+      "isAdult": "1"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_hentaiTrue",
+    "value": {
+      "title": "Neutral title",
+      "is_hentai": true
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_hentai1",
+    "value": {
+      "title": "Neutral title",
+      "is_hentai": 1
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_hentaitrue",
+    "value": {
+      "title": "Neutral title",
+      "is_hentai": "true"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_hentaiyes",
+    "value": {
+      "title": "Neutral title",
+      "is_hentai": "yes"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_hentai1",
+    "value": {
+      "title": "Neutral title",
+      "is_hentai": "1"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block isHentaiTrue",
+    "value": {
+      "title": "Neutral title",
+      "isHentai": true
+    },
+    "blocked": true
+  },
+  {
+    "name": "block isHentai1",
+    "value": {
+      "title": "Neutral title",
+      "isHentai": 1
+    },
+    "blocked": true
+  },
+  {
+    "name": "block isHentaitrue",
+    "value": {
+      "title": "Neutral title",
+      "isHentai": "true"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block isHentaiyes",
+    "value": {
+      "title": "Neutral title",
+      "isHentai": "yes"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block isHentai1",
+    "value": {
+      "title": "Neutral title",
+      "isHentai": "1"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block pornographicTrue",
+    "value": {
+      "title": "Neutral title",
+      "pornographic": true
+    },
+    "blocked": true
+  },
+  {
+    "name": "block pornographic1",
+    "value": {
+      "title": "Neutral title",
+      "pornographic": 1
+    },
+    "blocked": true
+  },
+  {
+    "name": "block pornographictrue",
+    "value": {
+      "title": "Neutral title",
+      "pornographic": "true"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block pornographicyes",
+    "value": {
+      "title": "Neutral title",
+      "pornographic": "yes"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block pornographic1",
+    "value": {
+      "title": "Neutral title",
+      "pornographic": "1"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_pornTrue",
+    "value": {
+      "title": "Neutral title",
+      "is_porn": true
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_porn1",
+    "value": {
+      "title": "Neutral title",
+      "is_porn": 1
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_porntrue",
+    "value": {
+      "title": "Neutral title",
+      "is_porn": "true"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_pornyes",
+    "value": {
+      "title": "Neutral title",
+      "is_porn": "yes"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block is_porn1",
+    "value": {
+      "title": "Neutral title",
+      "is_porn": "1"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block sexually_explicitTrue",
+    "value": {
+      "title": "Neutral title",
+      "sexually_explicit": true
+    },
+    "blocked": true
+  },
+  {
+    "name": "block sexually_explicit1",
+    "value": {
+      "title": "Neutral title",
+      "sexually_explicit": 1
+    },
+    "blocked": true
+  },
+  {
+    "name": "block sexually_explicittrue",
+    "value": {
+      "title": "Neutral title",
+      "sexually_explicit": "true"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block sexually_explicityes",
+    "value": {
+      "title": "Neutral title",
+      "sexually_explicit": "yes"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block sexually_explicit1",
+    "value": {
+      "title": "Neutral title",
+      "sexually_explicit": "1"
+    },
+    "blocked": true
+  },
+  {
+    "name": "allow false adult False",
+    "value": {
+      "title": "Naruto",
+      "adult": false
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow false adult 0",
+    "value": {
+      "title": "Naruto",
+      "adult": 0
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow false adult false",
+    "value": {
+      "title": "Naruto",
+      "adult": "false"
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow false adult no",
+    "value": {
+      "title": "Naruto",
+      "adult": "no"
+    },
+    "blocked": false
+  },
+  {
+    "name": "allow false adult None",
+    "value": {
+      "title": "Naruto",
+      "adult": null
+    },
+    "blocked": false
+  },
+  {
+    "name": "block genres ['Animation', 'Hentai']",
+    "value": {
+      "title": "Neutral title",
+      "genres": [
+        "Animation",
+        "Hentai"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "block genres ['Adult']",
+    "value": {
+      "title": "Neutral title",
+      "genres": [
+        "Adult"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "block genres ['Ecchi']",
+    "value": {
+      "title": "Neutral title",
+      "genres": [
+        "Ecchi"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "block genres ['Erotica']",
+    "value": {
+      "title": "Neutral title",
+      "genres": [
+        "Erotica"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "block genres ['R18']",
+    "value": {
+      "title": "Neutral title",
+      "genres": [
+        "R18"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "block genres ['18+']",
+    "value": {
+      "title": "Neutral title",
+      "genres": [
+        "18+"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "block genres ['NSFW']",
+    "value": {
+      "title": "Neutral title",
+      "genres": [
+        "NSFW"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "block genres Animation, Adult",
+    "value": {
+      "title": "Neutral title",
+      "genres": "Animation, Adult"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block genres Anime / Hentai",
+    "value": {
+      "title": "Neutral title",
+      "genres": "Anime / Hentai"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block genres [{'name': 'Hentai'}]",
+    "value": {
+      "title": "Neutral title",
+      "genres": [
+        {
+          "name": "Hentai"
+        }
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "block description",
+    "value": {
+      "title": "Neutral title",
+      "description": "A pornographic animation."
+    },
+    "blocked": true
+  },
+  {
+    "name": "block alternate title",
+    "value": {
+      "title": "Neutral title",
+      "aliases": [
+        "Normal name",
+        "Bible Black"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "block release name",
+    "value": {
+      "filename": "Show.hentai.1080p.mkv"
+    },
+    "blocked": true
+  },
+  {
+    "name": "block saved row",
+    "value": {
+      "item": {
+        "title": "Hentai special"
+      },
+      "context": {}
+    },
+    "blocked": true
+  },
+  {
+    "name": "do not inspect URL",
+    "value": {
+      "title": "Naruto",
+      "poster_url": "https://cdn.invalid/hentai/opaque.jpg",
+      "id": {
+        "provider": "moviebox",
+        "value": "xxx"
+      }
+    },
+    "blocked": false
+  },
+  {
+    "name": "live-search explicit regression Ane Jiru the animation: Shirakawa san shimai ni omakase",
+    "value": {
+      "title": "Ane Jiru the animation: Shirakawa san shimai ni omakase",
+      "genres": [
+        "Animation"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "live-search explicit regression SWAMP STAMP Anime Edition",
+    "value": {
+      "title": "SWAMP STAMP Anime Edition",
+      "genres": [
+        "Animation"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "live-search explicit regression Momoiro Bouenkyou Anime Edition",
+    "value": {
+      "title": "Momoiro Bouenkyou Anime Edition",
+      "genres": [
+        "Animation"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "live-search explicit regression Savita Bhabhi",
+    "value": {
+      "title": "Savita Bhabhi",
+      "genres": [
+        "Animation"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "block harem-tagged anime",
+    "value": {
+      "title": "Generic series",
+      "genres": [
+        "Animation",
+        "Harem"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "block reverse harem metadata",
+    "value": {
+      "title": "Generic series",
+      "tags": [
+        "Reverse Harem"
+      ]
+    },
+    "blocked": true
+  },
+  {
+    "name": "block known harem title without genre",
+    "value": {
+      "title": "High School DxD"
+    },
+    "blocked": true
+  },
+  {
+    "name": "retain requested SAO with harem label",
+    "value": {
+      "title": "Sword Art Online",
+      "genres": [
+        "Animation",
+        "Harem"
+      ]
+    },
+    "blocked": false
+  },
+  {
+    "name": "retain requested SAO Hindi edition",
+    "value": {
+      "title": "Sword Art Online [Hindi]",
+      "genres": [
+        "Animation",
+        "Female Harem"
+      ]
+    },
+    "blocked": false
+  },
+  {
+    "name": "never exempt explicit SAO label",
+    "value": {
+      "title": "Sword Art Online",
+      "genres": [
+        "Animation",
+        "Harem",
+        "Hentai"
+      ]
+    },
+    "blocked": true
+  }
+]

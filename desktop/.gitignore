@@ -1,0 +1,6 @@
+.venv/
+bin/
+build/
+__pycache__/
+tests/__pycache__/
+*.spec

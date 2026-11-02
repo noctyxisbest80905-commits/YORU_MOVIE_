@@ -1,0 +1,20 @@
+{
+  "app": "Yoru Mobile filtered",
+  "version_code": 3,
+  "bytes": 20971642,
+  "sha256": "e38af9c148a2bceb82fdc7d654bd80cd7ea76a60bbef2ab91a4a3fdc12835809",
+  "signature_verified": true,
+  "same_signing_certificate_as_prior_preview": false,
+  "install_note": "Uninstall old preview first if signatures differ. Uninstall deletes local favorites/settings/history. Do not bypass Android security.",
+  "java_tests_passed": 32,
+  "shared_policy_cases": 118,
+  "offline_index_explicit_anime_records": 2035,
+  "offline_index_aliases": 12272,
+  "ambiguous_aliases_excluded": 932,
+  "zip_alignment_16k_verified": true,
+  "all_bundled_assets_match_source": true,
+  "gate_classes_present_in_dex": true,
+  "native_provider_libraries_unchanged": true,
+  "browser_ui_tests": "content gate plus original mobile/remote UI regressions passed, native transport mocked",
+  "device_limits": "Installation, actual Media3 playback/resume and device/network behavior still require device testing. Filtering cannot guarantee detection of all explicit content."
+}

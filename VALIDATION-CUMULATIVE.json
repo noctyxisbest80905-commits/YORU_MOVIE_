@@ -1,0 +1,31 @@
+{
+  "android_apks": [
+    {
+      "platform": "mobile",
+      "version_code": 4,
+      "bytes": 19896924,
+      "sha256": "3cf257597209ee9bb414ce7eb4b4c537fc1de4fd27bbc7717e7d80f524aca098",
+      "signature_matches_filtered_v03": true,
+      "debuggable": false,
+      "zipaligned_16kb": true,
+      "unit_tests": 42
+    },
+    {
+      "platform": "tv",
+      "version_code": 4,
+      "bytes": 19901075,
+      "sha256": "0cb262d36e3f873861d62935d61cfd23b45a0016834b929a86f698cdfff65a9c",
+      "signature_matches_filtered_v03": true,
+      "debuggable": false,
+      "zipaligned_16kb": true,
+      "unit_tests": 42
+    }
+  ],
+  "java_tests_each_android_app": 42,
+  "browser_download_tests": "Phone and TV pass; native actions mocked",
+  "browser_regressions": "History, touch, remote and 118 shared content-filter policy cases per platform pass",
+  "http_transport_checks": 8,
+  "transport_test_limit": "Actual transport source with minimal Android/Media3 interface stubs; not an Android device run",
+  "pc_delivery": "Current source + Windows setup workflow only; no Windows executable bundled",
+  "limitations": "No native Android device/emulator, native offline completion or actual movie playback verification; Windows packaging still requires Windows workflow"
+}

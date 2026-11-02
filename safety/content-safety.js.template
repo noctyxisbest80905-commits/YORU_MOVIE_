@@ -1,0 +1,31 @@
+/* Generated from safety/policy.json. Always on; no settings bypass. */
+(()=>{'use strict';
+const policy=__POLICY__;
+const index=__INDEX__;
+function normalize(v){return String(v??'').normalize('NFKD').toLowerCase().replace(/[\p{M}\p{Cf}]/gu,'').replace(/[013457@$]/g,c=>({'0':'o','1':'i','3':'e','4':'a','5':'s','7':'t','@':'a','$':'s'}[c])).replace(/[^\p{L}\p{N}]+/gu,' ').trim().replace(/\s+/g,' ');}
+function contains(v,p){const a=normalize(v),b=normalize(p);return /[^\x00-\x7f]/.test(b)?a.includes(b):(' '+a+' ').includes(' '+b+' ');}
+function blockedText(v){const raw=String(v??'').normalize('NFKC').toLowerCase();return /(?:^|[^\p{L}\p{N}])h[\W_]*[e3][\W_]*n[\W_]*t[\W_]*[a4@][\W_]*[i1](?:s)?(?:$|[^\p{L}\p{N}])/u.test(raw)||policy.phrases.some(p=>contains(v,p));}
+function strings(v){if(typeof v==='string')return[v];if(Array.isArray(v))return v.flatMap(strings);if(v&&typeof v==='object')return Object.entries(v).filter(([k])=>!['id','url','poster_url','image','poster','value'].includes(k)).flatMap(([,x])=>strings(x));return[];}
+const animeTitles=new Set(index.titles.map(normalize)),animeLong=[...animeTitles].filter(x=>x.length>=12&&x.split(' ').length>=2),haremTitles=new Set((index.harem_titles||[]).map(normalize));
+function animeContext(v){return ['genres','genre','tags','category','categories'].some(k=>strings(v[k]).some(s=>['anime','animation','hentai'].some(p=>contains(s,p))))||strings(v.title).some(s=>['anime edition','the animation'].some(p=>contains(s,p)));}
+function indexedTitle(s){let v=normalize(String(s).normalize('NFKC').replace(/[\[(][^\])]*(?:hindi|english|japanese|dubbed|subbed|1080|720|cam|bluray)[^\])]*[\])]/gi,' ')).replace(/\s+(?:anime edition|the animation)$/,'');return animeTitles.has(v)||animeLong.some(t=>v.startsWith(t+' '));}
+function sao(v){return normalize(String(v?.title||'').normalize('NFKC').replace(/[\[(][^\])]*(?:hindi|english|japanese|dubbed|subbed|1080|720|cam|bluray)[^\])]*[\])]/gi,' '))==='sword art online';}
+function haremTitle(s){return haremTitles.has(normalize(String(s).normalize('NFKC').replace(/[\[(][^\])]*(?:hindi|english|japanese|dubbed|subbed|1080|720|cam|bluray)[^\])]*[\])]/gi,' ')));}
+function blocked(v){if(!v||typeof v!=='object')return false;if(v.item&&blocked(v.item))return true;if(animeContext(v)&&policy.title_fields.some(k=>strings(v[k]).some(indexedTitle)))return true;if(!sao(v)&&policy.title_fields.some(k=>strings(v[k]).some(haremTitle)))return true;
+ if(policy.flag_fields.some(k=>v[k]===true||v[k]===1||(typeof v[k]==='string'&&['true','yes','1'].includes(v[k].toLowerCase()))))return true;
+ for(const k of policy.text_fields)for(const t of strings(v[k])){
+  if(blockedText(t))return true;
+  if(policy.title_fields.includes(k)&&(/(?:\[|\()\s*(?:18\s*\+|adult|r\s*-?\s*18|nsfw)\s*(?:\]|\))/i.test(t.normalize('NFKC'))||policy.known_titles.some(p=>contains(t,p))))return true;
+  if(policy.category_fields.includes(k)&&t.split(/[,/|;]/).some(x=>policy.category_labels.some(p=>normalize(x)===normalize(p))||(!sao(v)&&policy.harem_category_labels.some(p=>normalize(x)===normalize(p)))))return true;
+ }return false;}
+const denied=new Set();function key(v){if(v?.item)return key(v.item);return v?.id&&typeof v.id==='object'?v.id.provider+'\n'+v.id.value:'';}
+function check(v){if(blocked(v)){const k=key(v);if(k)denied.add(k);return true;}return denied.has(key(v))||!!(v?.context&&denied.has(v.context.provider+'\n'+v.context.id));}
+function clean(action,data){if(['home','search','favorites','toggle_favorite','history','remove_history','clear_history','releases'].includes(action)&&Array.isArray(data)){data.forEach(check);return data.filter(x=>!check(x));}if(action==='details'&&check(data))throw new Error(policy.message);return data;}
+function wrap(dispatch){return async function(action,p={}){
+ if((action==='search'&&(blockedText(p.query)||contains(p.query||'','harem')))||(['play','toggle_favorite'].includes(action)&&(check(p.item)||check(p.release))))return{ok:false,error:policy.message};
+ const result=await dispatch(action,p);if(!result?.ok)return result;try{return{...result,data:clean(action,result.data)};}catch(e){return{ok:false,error:e.message};}
+};}
+window.YoruSafety={blocked,blockedText,clean,wrap,policyVersion:policy.version,indexAliasCount:index.alias_count};
+function install(){const api=window.pywebview?.api;if(!api||api.__yoruSafety)return;const dispatch=api.dispatch.bind(api);api.dispatch=wrap(dispatch);api.__yoruSafety=true;}
+install();window.addEventListener('pywebviewready',install);document.addEventListener('DOMContentLoaded',install);
+})();

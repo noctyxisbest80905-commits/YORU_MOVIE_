@@ -1,0 +1,36 @@
+name: Build Windows Desktop
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: 'x64'
+      - name: Build desktop executable and run unit tests
+        shell: powershell
+        run: ./desktop/build-windows.ps1
+      - name: Smoke-test the actual backend protocol
+        shell: powershell
+        run: |
+          $reply = '{"action":"players","payload":{}}' | & .\desktop\bin\moviebox-desktop-bridge.exe
+          $result = $reply | ConvertFrom-Json
+          if (-not $result.ok) { throw 'Backend protocol smoke test failed' }
+      - name: Include license and usage documentation
+        shell: powershell
+        run: |
+          Copy-Item LICENSE-MIT,LICENSE-APACHE dist/
+          Copy-Item desktop/README.md dist/README.md
+          Compress-Archive -Path dist/* -DestinationPath Yoru-Desktop-Windows-x64.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Yoru-Desktop-Windows-x64
+          path: Yoru-Desktop-Windows-x64.zip
+          if-no-files-found: error
+          retention-days: 30

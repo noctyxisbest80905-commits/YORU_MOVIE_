@@ -1,0 +1,38 @@
+YORU — FILTERED BUILDS
+Created by Obscura
+
+Android phone/tablet: Yoru-Mobile-filtered.apk
+Android TV/Google TV: Yoru-TV-filtered.apk
+Android 8.0+, ARM64/ARMv7/x86_64. Debug-signed installable builds, not store releases.
+Version code 3, same package IDs as previous Yoru previews, different signing key.
+Uninstall the old preview first if Android rejects an update. Uninstall removes
+that app's local favorites, settings and history; record anything you want to keep.
+Follow normal device installation permissions; do not bypass security checks.
+Actual device installation/Media3 playback still needs device testing.
+
+PC: source update only. No compiled Windows EXE or Setup.exe is included here.
+Merge the PC source overlay into your existing full repository, then run
+Actions > Build Yoru Windows Setup > Run workflow. Download the successful artifact
+and install its Yoru-Setup.exe to replace the old unfiltered PC executable.
+The filtered installer does not bundle the unfiltered upstream terminal client.
+
+FILTER
+Always on in Yoru. Native gates screen search/discovery metadata and known title
+aliases; unverified catalog results remain hidden. Details, release/subtitle
+requests and playback are also gated. Known explicit matches in favorites/history
+are hidden, not deleted. Offline explicit-anime data and database licenses are
+included. No new runtime classifier receives queries. Ordinary anime is not
+blanket-blocked. The classifier is not an image/video scanner or parental-control
+certification and cannot guarantee all new/mislabeled explicit content is blocked.
+
+TESTS
+55 Python tests; 32 Java tests per Android app; shared 118-case allow/block corpus;
+browser content-filter and original desktop/history/touch/remote regression suites.
+Four known explicit titles were removed from one live 10-title anime search sample.
+No media was played. No claim is made that every retained title/provider is safe.
+
+SOURCE UPLOAD NOTE
+The Android source overlay exceeds 100 files. If using GitHub web upload, upload
+android-mobile/, android-tv/ and safety/ separately into the existing repository
+root, then add the workflow/source files. Do not upload the ZIP as source code.
+The PC source overlay is separate and contains fewer than 100 files.

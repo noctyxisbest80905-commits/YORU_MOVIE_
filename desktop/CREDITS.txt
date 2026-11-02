@@ -1,0 +1,31 @@
+YORU
+Created by Obscura.
+
+Yoru is the desktop application, interface, and packaging built on the
+MovieBox TUI project. The original provider engine and terminal app retain
+their upstream authorship and licenses; this is not a claim that Obscura
+created the original MovieBox TUI engine or third-party services.
+
+Upstream foundation:
+MovieBox TUI contributors — https://github.com/mesamirh/MovieBox-Tui
+License: MIT OR Apache-2.0. See LICENSE-MIT and LICENSE-APACHE.
+
+Configured third-party streaming providers:
+MovieBox; 4KHDHub; Dramachi; CircleFTP (BDIX); DhakaFlix (BDIX).
+The 4KHDHub resolver also supports HubCloud and Pixeldrain links.
+Additional hosting/CDN servers vary by release and are not owned by Yoru.
+BDIX services require a compatible network.
+
+Players and application technologies:
+VLC — VideoLAN; mpv — mpv contributors; pywebview; Microsoft WebView2;
+Rust and Python communities; PyInstaller; NSIS.
+Their respective licenses, trademarks, and notices remain applicable.
+VLC is optional and installed separately from its official distributor.
+
+Media and artwork remain the property of their respective creators and
+rights holders. Credit is acknowledgement, not affiliation/endorsement
+or a grant of streaming rights. Use only content you are authorized to access.
+
+Offline explicit-anime index derived from manami-project/anime-offline-database.
+Database: ODbL-1.0 + DbCL-1.0. Complete derivative and license notices included.
+See ANIME-INDEX-NOTICE.txt and ANIME-INDEX-LICENSE.txt.

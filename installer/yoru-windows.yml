@@ -1,0 +1,52 @@
+name: Build Yoru Windows Setup
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  setup:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-pc-windows-msvc
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: 'x64'
+      - name: Install NSIS wizard compiler
+        shell: powershell
+        run: choco install nsis --yes --no-progress
+      - name: Validate PowerShell source
+        shell: powershell
+        run: |
+          Get-ChildItem desktop,installer -Filter *.ps1 -Recurse | ForEach-Object {
+            $tokens = $null; $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$errors) | Out-Null
+            if ($errors.Count) { throw ($errors | Out-String) }
+          }
+      - name: Build filtered Yoru, licenses, and setup wizard
+        shell: powershell
+        run: ./installer/build-setup.ps1
+      - name: Smoke-test the real backend protocol
+        shell: powershell
+        run: |
+          $reply = '{"action":"players","payload":{}}' | & .\desktop\bin\moviebox-desktop-bridge.exe
+          $result = $reply | ConvertFrom-Json
+          if (-not $result.ok) { throw 'Backend protocol smoke test failed.' }
+      - name: Rust bridge tests
+        shell: powershell
+        run: cargo test --locked --bin moviebox-desktop-bridge
+      - name: Upload Windows installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: Yoru-Windows-Setup-x64
+          path: |
+            dist/Yoru-Setup.exe
+            dist/Yoru-Setup.exe.sha256
+            dist/CREDITS.txt
+            dist/THIRD-PARTY-LICENSES.txt
+            installer/README.txt
+          if-no-files-found: error
+          retention-days: 30

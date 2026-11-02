@@ -1,0 +1,12 @@
+{
+  "platform": "mobile",
+  "version_code": 4,
+  "bytes": 19896924,
+  "sha256": "3cf257597209ee9bb414ce7eb4b4c537fc1de4fd27bbc7717e7d80f524aca098",
+  "signature_matches_filtered_v03": true,
+  "debuggable": false,
+  "zipaligned_16kb": true,
+  "unit_tests": 42,
+  "verification_scope": "APK integrity/signature checks and local JVM/browser tests; no physical-device or emulator download/playback verification",
+  "shared_filter_policy_cases": 118
+}

@@ -1,0 +1,20 @@
+Yoru explicit-anime title index: a derivative of "anime-offline-database" by
+manami-project. Source: https://github.com/manami-project/anime-offline-database
+Snapshot: release 2026-27, lastUpdate 2026-07-04.
+
+Modifications: retained titles and synonyms for records tagged "hentai" or
+"pornography" and, separately, harem-classified records. Pictures, thumbnails,
+descriptions and all other data were omitted. The primary Sword Art Online record
+is excluded from the harem list at the user’s request, not from explicit checks.
+Yoru uses these alias lists as offline filters. Harem is not the same as explicit content.
+
+This derivative database is offered under ODbL-1.0 and DbCL-1.0. The full derivative
+is included as adult_anime_index.json, and its reproducible extraction script is
+included in the source update. See ANIME-INDEX-LICENSE.txt for both licenses.
+These database licenses do not change the app's separate source-code licenses.
+Neither the dataset authors nor metadata providers endorse or are affiliated with Yoru.
+
+Known limitations: classifications can be wrong or incomplete, aliases can collide,
+and newly released or mislabeled explicit content can be missed. This is not a
+parental-control certification or a guarantee that any result is appropriate for children.
+No user search history or titles are sent to the offline database project at runtime.

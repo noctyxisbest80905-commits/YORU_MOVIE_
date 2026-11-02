@@ -1,0 +1,20 @@
+#download-video{width:100%;margin-top:12px;min-height:48px;font-size:16px}
+#downloads-dialog{width:min(1000px,calc(100% - 40px));max-height:90dvh;overflow:auto}
+.download-intro{max-width:700px;color:var(--muted,#b8b3c1);font-size:16px;line-height:1.5}
+.download-toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:24px 0}
+#downloads-storage{flex:1;min-width:170px;font-size:14px;color:#bab5c1}
+#downloads-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.download-card{min-width:0;border:1px solid #514956;border-radius:8px;padding:20px;background:#211c27}
+.download-card h3{font-size:20px;line-height:1.3;margin:0 0 8px;overflow-wrap:anywhere}
+.download-card p{font-size:14px;line-height:1.5;margin:8px 0;color:#c2bec8}
+.download-card .download-state{font-size:16px;color:#f5f2fa}
+.download-card progress{display:block;width:100%;height:6px;margin:16px 0;accent-color:#aa72f0}
+.download-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.download-actions button,.download-toolbar button{min-height:48px;font-size:16px}
+#downloads-status{font-size:16px;line-height:1.5}
+#downloads-empty{padding:32px 0;color:#c2bec8;font-size:16px;line-height:1.5}
+#nav-downloads{min-width:48px}
+body.mobile-ui .bottom-nav .nav{min-width:0}
+@media(max-width:599px){#downloads-dialog{width:100%;max-height:94dvh;margin:auto 0 0;border-radius:16px 16px 0 0}#downloads-grid{grid-template-columns:1fr}.download-card{background:#202020;border-color:#4d4d4d}.download-card progress{accent-color:#f01830}.bottom-nav{gap:0!important}.bottom-nav .nav{min-width:0!important;flex:1;padding-left:2px!important;padding-right:2px!important}.bottom-nav .nav span{font-size:14px}#downloads-storage{flex-basis:100%;}.download-toolbar{gap:12px}.download-card{padding:16px}}
+#close-downloads{min-width:48px;min-height:48px;font-size:26px;line-height:1;background:transparent;border:0;color:#f5f2fa;border-radius:8px}
+#close-downloads:focus-visible{outline:3px solid #b181fa;outline-offset:2px}
