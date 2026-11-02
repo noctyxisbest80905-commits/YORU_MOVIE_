@@ -1,0 +1,7 @@
+YORU CUMULATIVE RELEASE
+Includes the Yoru/Obscura/provider credits update and all subsequent app changes.
+Current Android APKs are v0.4, non-debuggable and signed with the v0.3 filtered
+build certificate. Do not follow old v0.3 uninstall advice unless your own installed
+build actually has a different certificate. Uninstalling deletes local app data.
+Current scope, signing, features and validation are documented in README.md and
+ANDROID_OFFLINE_FULLSCREEN.md. Older v0.3 notes are preserved under docs/release-history/.

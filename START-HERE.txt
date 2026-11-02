@@ -1,0 +1,12 @@
+YORU — ALL CUMULATIVE UPDATES
+Created by Obscura
+
+This folder is the complete repository source snapshot, not a small overlay.
+Copy its CONTENTS, including .github, into your existing local repository root.
+Do not nest this repository/ folder inside your GitHub repository.
+See README.md for features, GitHub Actions builds and Android signing limits.
+See the outer archive's README-FIRST.txt for detailed upload instructions.
+
+PC: source and Windows build/setup workflow; no prebuilt Windows EXE is supplied.
+Android: v0.4 installable phone/TV APKs are in the outer installers/ folder.
+Old binaries are not updated merely by uploading source to GitHub.

@@ -1,0 +1,21 @@
+[package]
+name = "moviebox-tv-native"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+[lib]
+name = "moviebox_tv"
+crate-type = ["cdylib", "rlib"]
+[dependencies]
+moviebox-tui = { path = "../.." }
+jni = "0.21.1"
+serde_json = "1.0.150"
+tokio = { version = "1.52.3", features = ["rt-multi-thread", "time"] }
+rustls = { version = "0.23.42", default-features = false, features = ["ring", "std"] }
+url = "2.5.8"
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = "s"
+strip = true
+panic = "unwind"

@@ -1,0 +1,29 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.moviebox.tv'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.obscura.yoru.mobile'
+        minSdk 26
+        targetSdk 35
+        versionCode 5
+        versionName '0.5-dev-mobile'
+        ndk { abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86_64' }
+    }
+    testOptions { unitTests.all { systemProperty "yoru.safety.index", rootProject.file("../safety/adult_anime_index.json").absolutePath } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    buildTypes {
+        debug { applicationIdSuffix '.test'; minifyEnabled false }
+        release { minifyEnabled false }
+    }
+    packaging { jniLibs { useLegacyPackaging = false } }
+}
+dependencies {
+    implementation 'androidx.webkit:webkit:1.12.1'
+    implementation 'androidx.media3:media3-exoplayer:1.5.1'
+    implementation 'androidx.media3:media3-exoplayer-hls:1.5.1'
+    implementation 'androidx.media3:media3-exoplayer-dash:1.5.1'
+    implementation 'androidx.media3:media3-ui:1.5.1'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.json:json:20240303'
+}

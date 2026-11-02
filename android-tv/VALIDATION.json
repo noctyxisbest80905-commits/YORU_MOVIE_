@@ -1,0 +1,12 @@
+{
+  "platform": "tv",
+  "version_code": 4,
+  "bytes": 19901075,
+  "sha256": "0cb262d36e3f873861d62935d61cfd23b45a0016834b929a86f698cdfff65a9c",
+  "signature_matches_filtered_v03": true,
+  "debuggable": false,
+  "zipaligned_16kb": true,
+  "unit_tests": 42,
+  "verification_scope": "APK integrity/signature checks and local JVM/browser tests; no physical-device or emulator download/playback verification",
+  "shared_filter_policy_cases": 118
+}

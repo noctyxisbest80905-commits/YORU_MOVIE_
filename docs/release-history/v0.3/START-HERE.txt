@@ -1,0 +1,15 @@
+YORU — FILTERED PC SOURCE UPDATE
+
+This update adds an always-on explicit-content filter to the Yoru desktop app.
+It is SOURCE, not a precompiled Windows EXE or a functional Setup.exe.
+
+1. Merge the included desktop/, installer/, safety/, src/bin/ and .github/workflows/
+   files into your existing full project. Preserve existing Cargo/source files.
+2. Open Actions > Build Yoru Windows Setup > Run workflow.
+3. Download the successful Yoru-Windows-Setup-x64 artifact and extract it.
+4. Run Yoru-Setup.exe on Windows 10/11 x64 to replace the old unfiltered desktop app.
+   End users do not need Rust, Python or NSIS once the app has been built.
+
+The original unfiltered terminal is no longer bundled in this filtered installer.
+Read installer/README.txt and safety/README.md for behavior and limits.
+Old downloaded EXEs do not change automatically just by downloading this source ZIP.
