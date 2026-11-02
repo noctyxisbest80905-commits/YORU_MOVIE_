@@ -11,7 +11,7 @@ from test_api import app
 
 class RulesTests(unittest.TestCase):
     def test_shared_corpus(self):
-        for case in json.loads((Path(__file__).parents[2]/'safety/cases.json').read_text()):
+        for case in json.loads((Path(__file__).parents[2]/'safety/cases.json').read_text(encoding='utf-8')):
             with self.subTest(case=case['name']):self.assertEqual(is_blocked(case['value']),case['blocked'])
 
 class GateTests(unittest.TestCase):
