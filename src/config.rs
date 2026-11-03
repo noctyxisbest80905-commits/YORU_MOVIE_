@@ -96,7 +96,9 @@ pub fn set_android_app_root(root: PathBuf) -> Result<(), PathBuf> {
 
 pub fn config_dir() -> Option<PathBuf> {
     #[cfg(target_os = "android")]
-    if let Some(root) = ANDROID_APP_ROOT.get() { return Some(root.join("config")); }
+    if let Some(root) = ANDROID_APP_ROOT.get() {
+    return Some(root.join("config"));
+}
     if let Some(sandbox) = TEST_SANDBOX_DIR.as_ref() {
         return Some(sandbox.join("config").join(APP_NAME));
     }
@@ -131,7 +133,9 @@ pub fn config_dir() -> Option<PathBuf> {
 
 pub fn data_dir() -> Option<PathBuf> {
     #[cfg(target_os = "android")]
-    if let Some(root) = ANDROID_APP_ROOT.get() { return Some(root.join("data")); }
+    if let Some(root) = ANDROID_APP_ROOT.get() {
+    return Some(root.join("config"));
+}
     if let Some(sandbox) = TEST_SANDBOX_DIR.as_ref() {
         return Some(sandbox.join("data").join(APP_NAME));
     }
