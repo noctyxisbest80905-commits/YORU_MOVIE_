@@ -84,15 +84,15 @@ Section "Yoru Desktop and required backend" SEC_DESKTOP
  ; Remove only the legacy unfiltered terminal bundled by previous Yoru setup.
  Delete /REBOOTOK "$INSTDIR\moviebox-tui.exe"
  Delete "$DESKTOP\Yoru Terminal (MovieBox TUI).lnk"
- File "${INPUT_DIR}/Yoru.exe"
- File "${INPUT_DIR}/LICENSE-MIT"
- File "${INPUT_DIR}/LICENSE-APACHE"
- File "${INPUT_DIR}/CREDITS.txt"
- File "${INPUT_DIR}/adult_anime_index.json"
- File "${INPUT_DIR}/ANIME-INDEX-NOTICE.txt"
- File "${INPUT_DIR}/ANIME-INDEX-LICENSE.txt"
- File "${INPUT_DIR}/THIRD-PARTY-LICENSES.txt"
- File /oname=README.txt "${PROJECT_DIR}/installer/README.txt"
+ File "${INPUT_DIR}\Yoru.exe"
+ File "${INPUT_DIR}\LICENSE-MIT"
+ File "${INPUT_DIR}\LICENSE-APACHE"
+ File "${INPUT_DIR}\CREDITS.txt"
+ File "${INPUT_DIR}\adult_anime_index.json"
+ File "${INPUT_DIR}\ANIME-INDEX-NOTICE.txt"
+ File "${INPUT_DIR}\ANIME-INDEX-LICENSE.txt"
+ File "${INPUT_DIR}\THIRD-PARTY-LICENSES.txt"
+ File /oname=README.txt "${PROJECT_DIR}\installer\README.txt"
 SectionEnd
 
 Section /o "VLC media player (optional download + official wizard)" SEC_VLC
