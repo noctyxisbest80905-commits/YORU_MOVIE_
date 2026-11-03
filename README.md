@@ -2,6 +2,12 @@
 
 Cumulative PC, Android phone/tablet and Android TV source, including the Yoru rename and credits update and all subsequent changes in this delivery.
 
+## Downloads
+
+[Download the latest public release](https://github.com/noctyxisbest80905-commits/YORU_MOVIE_/releases/latest)
+
+The Android APK is attached to the release as `Yoru-Mobile-filtered.apk`.
+
 ## Included
 - Yoru branding and About Yoru & Credits, crediting Obscura, configured providers, mirror support, upstream contributors and runtime projects.
 - Providers: MovieBox, 4KHDHub, Dramachi, CircleFTP and DhakaFlix. Availability and BDIX network requirements still apply.
