@@ -268,9 +268,65 @@ jobs:
           name: binary-aarch64-linux-android
           path: MovieBox_Android_arm64.tar.gz
 
+  build-android-mobile:
+    name: Build Android Mobile APK
+    needs: [check-version, preflight]
+    if: needs.check-version.outputs.is_new == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools'
+
+      - name: Install Android SDK and NDK
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0' 'ndk;27.2.12479018'
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: 1.90.0
+          targets: aarch64-linux-android,armv7-linux-androideabi,x86_64-linux-android
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.10.2'
+
+      - name: Install native build helper
+        run: cargo install cargo-ndk --version 4.1.2 --locked
+
+      - name: Decode Android release keystore
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          test -n "$ANDROID_KEYSTORE_BASE64"
+          printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/yoru-release.jks"
+          test -s "$RUNNER_TEMP/yoru-release.jks"
+
+      - name: Build and test signed mobile APK
+        env:
+          YORU_ANDROID_BUILD_TYPE: release
+          ANDROID_KEYSTORE_PATH: ${{ runner.temp }}/yoru-release.jks
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: bash android-mobile/build-mobile.sh
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: binary-android-mobile
+          path: android-mobile/dist/Yoru-Mobile-filtered.apk
+          if-no-files-found: error
+
   release:
     name: Create Release
-    needs: [check-version, build, build-macos-universal, build-android]
+    needs: [check-version, build, build-macos-universal, build-android, build-android-mobile]
     if: needs.check-version.outputs.is_new == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -319,6 +375,7 @@ jobs:
             "MovieBox_Linux_x64.tar.gz"
             "MovieBox_Linux_arm64.tar.gz"
             "MovieBox_Android_arm64.tar.gz"
+            "Yoru-Mobile-filtered.apk"
             "MovieBox_macOS_Universal.tar.gz"
             "MovieBox_Windows_x64.zip"
             "MovieBox_Windows_arm64.zip"
@@ -333,7 +390,7 @@ jobs:
 
       - name: Generate checksums
         run: |
-          find artifacts -type f \( -name 'MovieBox_*.tar.gz' -o -name 'MovieBox_*.zip' \) -print0 |
+          find artifacts -type f \( -name 'MovieBox_*.tar.gz' -o -name 'MovieBox_*.zip' -o -name 'Yoru-Mobile-filtered.apk' \) -print0 |
             sort -z |
             while IFS= read -r -d '' file; do
               hash=$(sha256sum "$file" | awk '{print $1}')
@@ -346,6 +403,7 @@ jobs:
           subject-path: |
             artifacts/**/MovieBox_*.tar.gz
             artifacts/**/MovieBox_*.zip
+            artifacts/**/Yoru-Mobile-filtered.apk
             SHA256SUMS
 
       - name: Publish Release
@@ -358,4 +416,5 @@ jobs:
           files: |
             artifacts/**/MovieBox_*.tar.gz
             artifacts/**/MovieBox_*.zip
+            artifacts/**/Yoru-Mobile-filtered.apk
             SHA256SUMS

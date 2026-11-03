@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [0.1.29] - 2026-11-03
+
+### Fixed
+- Prevented the Android content-safety index from blocking startup on older devices.
+- Fixed Android GitHub Actions setup after Google removed the legacy SDK `tools` package.
+
+### Added
+- Added a production-signed mobile APK release path for Android 8+ devices.
+
 ## [0.1.28] - 2026-10-29
 
 ### Fixed
