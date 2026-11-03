@@ -32,9 +32,12 @@ jobs:
       - name: Smoke-test the real backend protocol
         shell: powershell
         run: |
+          # Windows PowerShell 5.1 must not prepend a BOM to the bridge's JSON input.
+          $OutputEncoding = [Console]::InputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
           $reply = '{"action":"players","payload":{}}' | & .\desktop\bin\moviebox-desktop-bridge.exe
+          if ($LASTEXITCODE -ne 0) { throw "Backend exited with code ${LASTEXITCODE}; raw reply: $reply" }
           $result = $reply | ConvertFrom-Json
-          if (-not $result.ok) { throw 'Backend protocol smoke test failed.' }
+          if (-not $result.ok) { throw "Backend protocol smoke test failed: $($result.error); raw reply: $reply" }
       - name: Rust bridge tests
         shell: powershell
         run: cargo test --locked --bin moviebox-desktop-bridge
