@@ -331,9 +331,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
-      attestations: write
       contents: write
-      id-token: write
     steps:
       - uses: actions/checkout@v7
 
@@ -396,15 +394,6 @@ jobs:
               hash=$(sha256sum "$file" | awk '{print $1}')
               echo "$hash  $(basename "$file")"
             done > SHA256SUMS
-
-      - name: Attest release artifacts
-        uses: actions/attest-build-provenance@v4
-        with:
-          subject-path: |
-            artifacts/**/MovieBox_*.tar.gz
-            artifacts/**/MovieBox_*.zip
-            artifacts/**/Yoru-Mobile-filtered.apk
-            SHA256SUMS
 
       - name: Publish Release
         uses: softprops/action-gh-release@v3
