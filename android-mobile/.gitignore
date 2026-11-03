@@ -6,3 +6,4 @@ app/src/main/jniLibs/
 native/target/
 dist/
 *.keystore
+*.jks
