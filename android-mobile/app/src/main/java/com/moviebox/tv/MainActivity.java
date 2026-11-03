@@ -83,8 +83,17 @@ public final class MainActivity extends Activity {
         root=new FrameLayout(this);root.setBackgroundColor(Color.rgb(11,11,11));setContentView(root);
         if(Build.VERSION.SDK_INT>=30){getWindow().setDecorFitsSystemWindows(false);root.setOnApplyWindowInsetsListener((v,insets)->{var bars=insets.getInsets(WindowInsets.Type.systemBars()|WindowInsets.Type.displayCutout());var ime=insets.getInsets(WindowInsets.Type.ime());if(video==null)v.setPadding(bars.left,bars.top,bars.right,Math.max(bars.bottom,ime.bottom));else v.setPadding(0,0,0,0);return insets;});}
         prefs=getSharedPreferences("moviebox_mobile",MODE_PRIVATE);
-        try(java.io.InputStream index=getAssets().open("adult_anime_index.json")){ContentSafety.loadAnimeIndex(readUtf8(index));}
-        catch(Exception error){new AlertDialog.Builder(this).setTitle("Content filter unavailable").setMessage("The offline content index could not load. Reinstall the complete Yoru APK; no catalog will be opened.").setPositiveButton("Close",(d,w)->finish()).setCancelable(false).show();return;}
+        android.widget.TextView loading=new android.widget.TextView(this);
+        loading.setText("Preparing Yoru...");loading.setTextColor(Color.WHITE);loading.setTextSize(18);loading.setGravity(Gravity.CENTER);
+        root.addView(loading,new FrameLayout.LayoutParams(-1,-1));
+        // Keep the UI responsive; no catalog or native requests are exposed until the filter is ready.
+        workers.execute(()->{
+            try(java.io.InputStream index=getAssets().open("adult_anime_index.json")){ContentSafety.loadAnimeIndex(readUtf8(index));}
+            catch(Exception error){runOnUiThread(()->{if(!destroyed)new AlertDialog.Builder(this).setTitle("Content filter unavailable").setMessage("The offline content index could not load. Reinstall the complete Yoru APK; no catalog will be opened.").setPositiveButton("Close",(d,w)->finish()).setCancelable(false).show();});return;}
+            runOnUiThread(()->{if(!destroyed){root.removeView(loading);finishStartup();}});
+        });
+    }
+    private void finishStartup() {
         contentGate=new ContentGate((action,payload)->new JSONObject(NativeBridge.nativeRequest(new JSONObject().put("action",action).put("payload",payload).toString())),new ContentGate.Storage(){public String read(){return prefs.getString("blocked_content_ids","[]");}public boolean write(String value){return prefs.edit().putString("blocked_content_ids",value).commit();}});
 
         try{history=new WatchHistory(new WatchHistory.Storage(){public String read(){return prefs.getString("history","[]");}public boolean write(String value){return prefs.edit().putString("history",value).commit();}});}

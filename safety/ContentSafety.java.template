@@ -10,7 +10,15 @@ final class ContentSafety {
  static {try{POLICY=new JSONObject(__POLICY__);}catch(Exception e){throw new ExceptionInInitializerError(e);}}
  static final String MESSAGE=POLICY.optString("message"),UNVERIFIED=POLICY.optString("unverified");
  static final class Blocked extends IllegalArgumentException {Blocked(){super(MESSAGE);}}
- static String normalize(String s){return Normalizer.normalize(s,Normalizer.Form.NFKD).toLowerCase(Locale.ROOT).replaceAll("[\\p{M}\\p{Cf}]","").replace('0','o').replace('1','i').replace('3','e').replace('4','a').replace('5','s').replace('7','t').replace('@','a').replace('$','s').replaceAll("[^\\p{L}\\p{N}]+"," ").trim().replaceAll("\\s+"," ");}
+ // Reuse Unicode patterns: compiling them for every index entry stalls older Android devices.
+ private static final Pattern MARKS=Pattern.compile("[\\p{M}\\p{Cf}]");
+ private static final Pattern NON_ALNUM=Pattern.compile("[^\\p{L}\\p{N}]+");
+ private static final Pattern SPACE=Pattern.compile("\\s+");
+ static String normalize(String s){
+  String value=MARKS.matcher(Normalizer.normalize(s,Normalizer.Form.NFKD).toLowerCase(Locale.ROOT)).replaceAll("")
+   .replace('0','o').replace('1','i').replace('3','e').replace('4','a').replace('5','s').replace('7','t').replace('@','a').replace('$','s');
+  return SPACE.matcher(NON_ALNUM.matcher(value).replaceAll(" ").trim()).replaceAll(" ");
+ }
  static boolean contains(String s,String p){String a=normalize(s),b=normalize(p);return b.chars().anyMatch(c->c>127)?a.contains(b):(" "+a+" ").contains(" "+b+" ");}
  static final Pattern OBFUSCATED=Pattern.compile("(?:^|[^\\p{L}\\p{N}])h[\\W_]*[e3][\\W_]*n[\\W_]*t[\\W_]*[a4@][\\W_]*[i1](?:s)?(?:$|[^\\p{L}\\p{N}])");
  static final Pattern BADGE=Pattern.compile("(?:\\[|\\()\\s*(?:18\\s*\\+|adult|r\\s*-?\\s*18|nsfw)\\s*(?:\\]|\\))",Pattern.CASE_INSENSITIVE);
