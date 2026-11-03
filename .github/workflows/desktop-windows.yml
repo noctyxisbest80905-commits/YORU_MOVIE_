@@ -21,7 +21,7 @@ jobs:
         run: |
           $reply = '{"action":"players","payload":{}}' | & .\desktop\bin\moviebox-desktop-bridge.exe
           $result = $reply | ConvertFrom-Json
-          if (-not $result.ok) { throw 'Backend protocol smoke test failed' }
+          if (-not $result.ok) { throw "Backend protocol smoke test failed: $($result.error); raw reply: $reply" }
       - name: Include license and usage documentation
         shell: powershell
         run: |

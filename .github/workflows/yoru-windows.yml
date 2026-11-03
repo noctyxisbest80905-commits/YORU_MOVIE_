@@ -34,7 +34,7 @@ jobs:
         run: |
           $reply = '{"action":"players","payload":{}}' | & .\desktop\bin\moviebox-desktop-bridge.exe
           $result = $reply | ConvertFrom-Json
-          if (-not $result.ok) { throw 'Backend protocol smoke test failed.' }
+          if (-not $result.ok) { throw "Backend protocol smoke test failed: $($result.error); raw reply: $reply" }
       - name: Rust bridge tests
         shell: powershell
         run: cargo test --locked --bin moviebox-desktop-bridge

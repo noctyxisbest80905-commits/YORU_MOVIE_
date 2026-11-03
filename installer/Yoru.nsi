@@ -67,7 +67,7 @@ Section "Microsoft WebView2 (only if missing; internet required)" SEC_RUNTIME
  SectionIn RO
  InitPluginsDir
  SetOutPath "$PLUGINSDIR"
- File /oname=Install-Prerequisite.ps1 "${PROJECT_DIR}/installer/Install-Prerequisite.ps1"
+ File /oname=Install-Prerequisite.ps1 "${PROJECT_DIR}\installer\Install-Prerequisite.ps1"
  runtime_retry:
  DetailPrint "Checking the required Microsoft WebView2 Runtime..."
  nsExec::ExecToLog '"$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -NonInteractive -ExecutionPolicy Bypass -File "$PLUGINSDIR\Install-Prerequisite.ps1" -Kind WebView2'
