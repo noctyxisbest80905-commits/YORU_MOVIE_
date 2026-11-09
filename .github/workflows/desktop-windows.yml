@@ -7,9 +7,9 @@ jobs:
   windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: dtolnay/rust-toolchain@stable
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           architecture: 'x64'
@@ -31,7 +31,7 @@ jobs:
           Copy-Item LICENSE-MIT,LICENSE-APACHE dist/
           Copy-Item desktop/README.md dist/README.md
           Compress-Archive -Path dist/* -DestinationPath Yoru-Desktop-Windows-x64.zip
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: Yoru-Desktop-Windows-x64
           path: Yoru-Desktop-Windows-x64.zip
